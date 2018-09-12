@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>เพิ่มข่าวสาร</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="closeEdit()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let photo of photos">
+      <ion-card>
+        <img [src]="photo" *ngIf="photo" />
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>หัวข้อเรื่อง</ion-label>
+      <ion-input type="text" [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>รายละเอียด</ion-label>
+      <ion-input type="text" [(ngModel)]="detail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>รายละเอียดเพิ่มเติม</ion-label>
+      <ion-textarea type="text" [(ngModel)]="moredetail"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <button ion-button (click)="takePhoto()">
+      <ion-icon name="camera"></ion-icon>
+      </button>
+    <button ion-button (click)="Gallery()">
+      <ion-icon name="image"></ion-icon>
+      </button>
+  </ion-list>
+  <button ion-button full (click)="confirmAddNews(new)">บันทึก</button>
+</ion-content>

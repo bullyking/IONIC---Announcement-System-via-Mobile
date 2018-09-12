@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-toolbar start>
+      <ion-title>เข้าสู่ระบบ</ion-title>
+    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <label class="logo-font">ระบบประกาศข่าวสารผ่าน Mobile</label>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-col text-center>
+        <ion-icon icon name="contact" color="primary" class="box-center"></ion-icon>
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>อีเมลล์</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>รหัสผ่าน</ion-label>
+      <ion-input type="{{type}}" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="submitLogin()">ยืนยัน</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button clear item-left style="font-size: 13px;" (click)="register()">สมัครสมาชิก</button>
+      <button ion-button clear item-right style="font-size: 13px;" (click)="resetpass()">ลืมรหัสผ่าน</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

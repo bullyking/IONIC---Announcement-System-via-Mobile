@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-toolbar start>
+      <ion-title>ตั้งค่า</ion-title>
+    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <label class="logo-font">ระบบประกาศข่าวสารผ่าน Mobile</label>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item inset style="color:#757575">ข้อมูลของฉัน</ion-item>
+    <button ion-item (click)="account()">
+      <ion-avatar item-left>
+        <ion-icon name="bookmarks" color="primary"></ion-icon>
+      </ion-avatar>
+      <h2>บัญชี</h2>
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แก้ไขข่าวสาร</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="closeEdit()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-card>
+        <img [src]="NewsData.image" />
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>หัวข้อเรื่อง</ion-label>
+      <ion-input type="text" [(ngModel)]="NewsData.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>รายละเอียด</ion-label>
+      <ion-input type="text" [(ngModel)]="NewsData.detail" name="detail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color>รายละเอียดเพิ่มเติม</ion-label>
+      <ion-textarea type="text" [(ngModel)]="NewsData.moredetail" name="moredetail"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="EditNews(NewsData)">บันทึก</button>
+</ion-content>

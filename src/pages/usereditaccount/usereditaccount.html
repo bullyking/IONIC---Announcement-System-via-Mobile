@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-toolbar start>
+      <ion-title>บัญชี</ion-title>
+    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <label class="logo-font">ระบบประกาศข่าวสารผ่าน Mobile</label>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-avatar-page">
+  <ion-list>
+    <ion-item inset style="color:#757575">ออกจากระบบ</ion-item>
+    <ion-item>
+      <ion-avatar item-left>
+        <ion-icon name="power" color="primary" class="icon-less"></ion-icon>
+      </ion-avatar>
+      <label class="font-label">ออกจากระบบ</label>
+      <button ion-button clear item-right (click)="logUserout()">ยืนยัน</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-toolbar start>
+      <ion-title>ข่าวสารต่างๆ</ion-title>
+    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <!-- <ion-icon name="logo-angular"></ion-icon> -->
+        <label class="logo-font">ระบบประกาศข่าวสารผ่าน Mobile</label>
+        <!-- <label class="logo-font">A.S.V.M</label> -->
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="padding">
+  <ion-card *ngFor="let new of news | async">
+    <img [src]="new.image" />
+    <ion-card-content>
+      <ion-card-title>
+        {{new.title}}
+      </ion-card-title>
+      <p>
+        {{new.detail}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear full color="secondary" (click)="UsersView(new)" icon-left>
+          <ion-icon name='open'></ion-icon>
+            เพิ่มเติม
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-note style="padding-top: 13px;">{{new.date}} {{new.time}}</ion-note>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-toolbar start>
+      <ion-title>การแจ้งเตือน</ion-title>
+    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <label class="logo-font">ระบบประกาศข่าวสารผ่าน Mobile</label>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="list-avatar-page">
+  <ion-list>
+    <ion-item inset class="linecolor" style="padding-top: 5px;">การแจ้งเตือน</ion-item>
+    <button ion-item (click)="UserModal(new)" *ngFor="let new of news | async">
+          <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+            <ion-icon color="primary" style="padding-top: 5px;">{{new.datefix}}</ion-icon>
+          </ion-avatar>
+          <div class="input-wrapper" style="padding-bottom: 6px;">
+            เรื่อง {{new.title}}
+          </div>
+          <ion-note color="primary" item-right>{{new.time}}</ion-note>
+    </button>
+  </ion-list>
+</ion-content>
