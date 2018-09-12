@@ -14,12 +14,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import firebase from 'firebase/app';
 
 var config = {
-  apiKey: "AIzaSyDiLPFsvV15obJjkGZ-wABBuDjzzGeAZ6o",
-  authDomain: "reservation-classroom.firebaseapp.com",
-  databaseURL: "https://reservation-classroom.firebaseio.com",
-  projectId: "reservation-classroom",
-  storageBucket: "reservation-classroom.appspot.com",
-  messagingSenderId: "665607053365"
+  Your Firebase Connection
 }
 firebase.initializeApp(config);
 
